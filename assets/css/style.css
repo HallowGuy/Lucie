@@ -1,13 +1,12 @@
 :root {
-  --main-color: #1A2A40;
-  --accent-color: #FDC93B;
-  --background-color: #f4f6f8;   /* anciennement #ffffff */
+  --main-color: #1A2A40;          /* Bleu nuit profond */
+  --accent-color: #FDC93B;        /* Jaune doré */
+  --background-color: #f0f2f5;    /* Fond gris clair adouci */
   --text-dark: #1f1f1f;
   --text-light: #ffffff;
-  --card-bg: #ffffff;
+  --card-bg: #1A2A40;
   --tile-gap: 24px;
 }
-
 
 /* Global Reset */
 * {
@@ -23,7 +22,6 @@ body {
   transition: opacity 0.5s ease;
 }
 
-/* Fade Animation */
 body.fade-in {
   opacity: 1;
 }
@@ -54,7 +52,6 @@ body.fade-out {
 .metro-header .header-text h1 {
   color: var(--main-color);
   font-size: 1.8rem;
-  margin: 0;
 }
 
 .metro-header .header-text p {
@@ -97,7 +94,7 @@ body.fade-out {
 
 .welcome-section p {
   font-size: 1rem;
-  color: #555;
+  color: #444;
 }
 
 /* TILE GRID */
@@ -109,38 +106,39 @@ body.fade-out {
   padding: 40px 20px;
 }
 
+/* TUILES STYLE METRO */
 .tile {
   flex: 1 1 280px;
   max-width: 400px;
   background-color: var(--card-bg);
-  border: 2px solid var(--main-color);
   border-radius: 12px;
   padding: 30px 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  color: var(--text-light);
 }
 
 .tile:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 
 .tile i {
   font-size: 2.5rem;
-  color: var(--main-color);
+  color: var(--accent-color);
   margin-bottom: 15px;
 }
 
 .tile h2 {
   font-size: 1.4rem;
-  color: var(--main-color);
+  color: var(--text-light);
   margin-bottom: 10px;
 }
 
 .tile p {
   font-size: 0.95rem;
-  color: #555;
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 20px;
 }
 
@@ -152,6 +150,7 @@ body.fade-out {
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
+  transition: background-color 0.2s ease;
 }
 
 .tile a:hover {
