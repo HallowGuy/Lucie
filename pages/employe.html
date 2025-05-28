@@ -1,229 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espace Collaborateur - Préparer ma Retraite</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        :root {
-            --main-color: #388EA2;
-            --light-color: #F9F9F9;
-            --accent-color: #F8BC4A;
-            --text-dark: #2c3e50;
-            --text-light: #ffffff;
-            --card-bg: #ffffff;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            display: flex;
-            height: 100vh;
-            background-color: var(--light-color);
-            color: var(--text-dark);
-        }
-
-        aside {
-            width: 220px;
-            background-color: var(--main-color);
-            color: var(--text-light);
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-
-        aside h2 {
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .nav-link {
-            color: var(--text-light);
-            text-decoration: none;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 6px;
-            transition: background 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .nav-link:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .main-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        header {
-            background-color: var(--main-color);
-            color: var(--text-light);
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .user-info img {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .notification-bar {
-            background-color: #fef3c7;
-            color: #92400e;
-            padding: 12px 30px;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 25px;
-            padding: 40px;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            padding: 25px 20px;
-            text-align: center;
-            transition: transform 0.2s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
-
-        .card h2 {
-            color: var(--main-color);
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .card a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--accent-color);
-            color: var(--text-dark);
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .card a:hover {
-            background-color: #e0a92a;
-        }
-
-        footer {
-            background-color: var(--main-color);
-            color: var(--text-light);
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        .card i {
-            font-size: 2rem;
-            color: var(--main-color);
-            margin-bottom: 10px;
-        }
-
-        @media (max-width: 768px) {
-            aside {
-                display: none;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Espace Collaborateur – Lucie</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="../assets/img/logo.png" type="image/png" />
 </head>
-<body>
-    <aside>
-        <h2>Mon Portail</h2>
-        <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Accueil</a>
-        <a class="nav-link" href="#"><i class="fas fa-chart-line"></i> Tableau de Bord</a>
-        <a class="nav-link" href="#"><i class="fas fa-graduation-cap"></i> Formations</a>
-        <a class="nav-link" href="#"><i class="fas fa-handshake"></i> Mentor</a>
-        <a class="nav-link" href="#"><i class="fas fa-hands-helping"></i> Bénévolat</a>
-        <a class="nav-link" href="#"><i class="fas fa-folder-open"></i> Documents</a>
-    </aside>
+<body class="fade-in">
 
-    <div class="main-content">
-        <header>
-            <h1>Espace Collaborateur</h1>
-            <div class="user-info">
-                <img src="https://i.pravatar.cc/36?u=jeandupont" alt="Avatar utilisateur">
-                <span>Jean Dupont</span>
-            </div>
-        </header>
+  <!-- Sidebar -->
+  <aside>
+    <h2>Lucie</h2>
+    <a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Accueil</a>
+    <a class="nav-link" href="#"><i class="fas fa-chart-line"></i> Tableau de Bord</a>
+    <a class="nav-link" href="#"><i class="fas fa-book-open"></i> Formations</a>
+    <a class="nav-link" href="#"><i class="fas fa-user-friends"></i> Mentor</a>
+    <a class="nav-link" href="#"><i class="fas fa-hands-helping"></i> Bénévolat</a>
+    <a class="nav-link" href="#"><i class="fas fa-folder-open"></i> Documents</a>
+  </aside>
 
-        <div class="notification-bar">
-            <i class="fas fa-bell"></i>
-            <span>Rappel : votre entretien retraite est prévu le 15 juin à 10h30. Pensez à le préparer.</span>
-        </div>
+  <!-- Main content -->
+  <div class="main-content">
+    <header data-include></header>
 
-        <div class="grid-container">
-            <div class="card">
-                <i class="fas fa-chart-pie"></i>
-                <h2>Tableau de Bord</h2>
-                <p>Suivez vos démarches, échéances, et visualisez votre progression personnalisée.</p>
-                <a href="tableau.html">Accéder</a>
-            </div>
-            <div class="card">
-                <i class="fas fa-book-reader"></i>
-                <h2>Modules de Formation</h2>
-                <p>Apprenez à anticiper votre retraite avec des vidéos, quiz et guides spécialisés.</p>
-                <a href="modules.html">Accéder</a>
-            </div>
-            <div class="card">
-                <i class="fas fa-user-friends"></i>
-                <h2>Mon Mentor</h2>
-                <p>Discutez avec une personne retraitée pour bénéficier de conseils concrets.</p>
-                <a href="mentor.html">Accéder</a>
-            </div>
-            <div class="card">
-                <i class="fas fa-hands-helping"></i>
-                <h2>Bénévolat</h2>
-                <p>Explorez des missions de bénévolat valorisant votre expérience professionnelle.</p>
-                <a href="benevolat.html">Accéder</a>
-            </div>
-            <div class="card">
-                <i class="fas fa-file-alt"></i>
-                <h2>Mes Documents</h2>
-                <p>Centralisez tous vos documents administratifs et justificatifs importants.</p>
-                <a href="documents.html">Accéder</a>
-            </div>
-        </div>
-
-        <footer>
-            <p>&copy; 2025 Préparer ma Retraite – Espace Collaborateur</p>
-        </footer>
+    <div class="notification-bar">
+      <i class="fas fa-bell"></i>
+      <span>Rappel : votre entretien retraite est prévu le 15 juin à 10h30. Pensez à le préparer.</span>
     </div>
-</body>
-</html>
+
+    <div class="grid-container">
+      <div class="card animate-fade-up">
+        <i class="fas fa-chart-pie"></i>
+        <h2>Tableau de Bord</h2>
+        <p>Suivez vos démarches, échéances, et visualisez votre progre
