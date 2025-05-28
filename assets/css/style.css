@@ -166,3 +166,22 @@ body.fade-out {
     width: 100%;
   }
 }
+.tile-employeur {
+  background-color: #FDC93B; /* Jaune foncé */
+  color: #1A2A40;            /* Bleu nuit (déjà défini comme --main-color) */
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tile-employeur i {
+  color: #1A2A40; /* Icônes aussi en bleu nuit */
+}
+
+.tile-employeur a {
+  background-color: #1A2A40;
+  color: white;
+}
+
+.tile-employeur a:hover {
+  background-color: #14202e;
+}
