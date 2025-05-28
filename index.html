@@ -10,23 +10,30 @@
 </head>
 <body class="fade-in">
 
-  <header data-include></header>
+  <!-- En-tête -->
+  <header class="metro-header">
+    <div class="container">
+      <img src="assets/img/logo.png" alt="Logo Lucie" class="logo" />
+      <div class="header-text">
+        <h1>Bienvenue sur Lucie</h1>
+        <p>Un portail unique pour anticiper, gérer et accompagner la retraite en toute sérénité.</p>
+      </div>
+    </div>
+  </header>
 
-  <section class="welcome-section">
-    <h1>Bienvenue sur Lucie</h1>
-    <p>Un portail unique pour anticiper, gérer et accompagner la retraite en toute sérénité.</p>
-  </section>
-
+  <!-- Grille des tuiles -->
   <div class="tile-grid">
 
-    <div class="tile tile-large" style="--tile-color: var(--main-color)">
+    <!-- Tuile Collaborateur -->
+    <div class="tile">
       <i class="fas fa-user"></i>
       <h2>Espace Collaborateur</h2>
       <p>Accédez à votre dossier retraite, documents et suivi personnalisé.</p>
       <a href="pages/employe.html">Accéder</a>
     </div>
 
-    <div class="tile tile-large" style="--tile-color: var(--accent-color)">
+    <!-- Tuile Employeur (style spécifique) -->
+    <div class="tile tile-employeur">
       <i class="fas fa-building"></i>
       <h2>Espace Employeur</h2>
       <p>Pilotez les départs, centralisez les dossiers et anticipez les échéances RH.</p>
@@ -35,8 +42,17 @@
 
   </div>
 
-  <footer data-include></footer>
+  <!-- Pied de page -->
+  <footer class="metro-footer">
+    <p>&copy; 2025 Lucie – Portail Retraite. Tous droits réservés.</p>
+    <nav>
+      <a href="#">Mentions légales</a> |
+      <a href="#">Contact</a> |
+      <a href="#">Assistance</a>
+    </nav>
+  </footer>
 
+  <!-- Scripts -->
   <script src="assets/js/transition.js"></script>
   <script src="assets/js/script.js"></script>
 </body>

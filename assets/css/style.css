@@ -101,15 +101,18 @@ body.fade-out {
 .tile-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--tile-gap);
   justify-content: center;
+  gap: var(--tile-gap);
   padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* TUILES STYLE METRO */
+/* TUILE GÉNÉRALE */
 .tile {
   flex: 1 1 280px;
   max-width: 400px;
+  min-height: 320px;
   background-color: var(--card-bg);
   border-radius: 12px;
   padding: 30px 20px;
@@ -117,6 +120,9 @@ body.fade-out {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .tile:hover {
@@ -157,6 +163,29 @@ body.fade-out {
   background-color: #e6b022;
 }
 
+/* TUILE EMPLOYEUR */
+.tile-employeur {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tile-employeur h2,
+.tile-employeur p,
+.tile-employeur i {
+  color: var(--main-color);
+}
+
+.tile-employeur a {
+  background-color: var(--main-color);
+  color: var(--text-light);
+}
+
+.tile-employeur a:hover {
+  background-color: #0f1d2f;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .metro-header .container {
@@ -165,46 +194,4 @@ body.fade-out {
   .tile {
     width: 100%;
   }
-}
-.tile-employeur {
-  background-color: #FDC93B; /* Jaune foncé */
-  color: #1A2A40;            /* Bleu nuit (déjà défini comme --main-color) */
-  border: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.tile-employeur i {
-  color: #1A2A40; /* Icônes aussi en bleu nuit */
-}
-
-.tile-employeur a {
-  background-color: #1A2A40;
-  color: white;
-}
-
-.tile-employeur a:hover {
-  background-color: #14202e;
-}
-
-
-.tile-employeur {
-  background-color: #FDC93B; /* Jaune foncé */
-  color: #1A2A40;            /* Bleu nuit */
-  border: 2px solid #1A2A40;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.tile-employeur h2,
-.tile-employeur p,
-.tile-employeur i {
-  color: #1A2A40; /* Tout le texte + icônes en bleu nuit */
-}
-
-.tile-employeur a {
-  background-color: #1A2A40; /* Bouton bleu nuit */
-  color: white;
-}
-
-.tile-employeur a:hover {
-  background-color: #0f1d2f; /* Bleu nuit foncé au survol */
 }
