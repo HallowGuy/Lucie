@@ -3,55 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Espace Employeur – Lucie</title>
+  <title>Espace RH – Lucie</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" href="../assets/img/logo.png" type="image/png" />
 </head>
 <body class="fade-in">
 
-  <header data-include></header>
+  <!-- En-tête -->
+  <header class="metro-header">
+    <div class="container">
+      <img src="../assets/img/logo.png" alt="Logo Lucie" class="logo" />
+      <div class="header-text">
+        <h1>Espace RH</h1>
+        <p>Pilotage collaborateur et suivi retraite</p>
+      </div>
+    </div>
+  </header>
 
+  <!-- Section de bienvenue -->
+  <section class="welcome-section">
+    <h1>Bienvenue dans votre tableau de bord RH</h1>
+    <p>Gérez facilement l’accompagnement retraite de vos collaborateurs</p>
+  </section>
+
+  <!-- Grille de tuiles -->
   <div class="tile-grid">
 
-    <div class="tile tile-large" style="--tile-color: var(--main-color)">
+    <div class="tile animate-fade-up">
       <i class="fas fa-users"></i>
       <h2>Vue RH Globale</h2>
-      <p>Suivi transversal de tous les employés et indicateurs clés RH.</p>
+      <p>Visualisez les parcours et situations de tous vos collaborateurs.</p>
       <a href="#">Accéder</a>
     </div>
 
-    <div class="tile" style="--tile-color: var(--accent-color)">
+    <div class="tile animate-fade-up delay">
       <i class="fas fa-star"></i>
       <h2>Évaluations Annuelles</h2>
-      <p>Lancez ou consultez les campagnes d’évaluation.</p>
+      <p>Lancez ou consultez les campagnes en cours ou passées.</p>
       <a href="#">Accéder</a>
     </div>
 
-    <div class="tile" style="--tile-color: var(--main-color)">
+    <div class="tile animate-fade-up">
       <i class="fas fa-heartbeat"></i>
       <h2>Visites Médicales</h2>
-      <p>Planifiez et suivez les obligations médicales.</p>
+      <p>Suivez et planifiez les obligations médicales de vos équipes.</p>
       <a href="#">Accéder</a>
     </div>
 
-    <div class="tile" style="--tile-color: var(--accent-color)">
+    <div class="tile animate-fade-up delay">
       <i class="fas fa-route"></i>
       <h2>Parcours Collaborateurs</h2>
-      <p>Visualisez les étapes de carrière et actions RH.</p>
+      <p>Accompagnez chaque employé dans son évolution vers la retraite.</p>
       <a href="#">Accéder</a>
     </div>
 
-    <div class="tile tile-wide" style="--tile-color: var(--main-color)">
+    <div class="tile animate-fade-up">
       <i class="fas fa-tools"></i>
       <h2>Administration</h2>
-      <p>Gérez les droits, les utilisateurs et les rôles RH.</p>
+      <p>Créez de nouveaux comptes, attribuez des droits, gérez l'accès.</p>
       <a href="#">Accéder</a>
+    </div>
+
+    <!-- Tuile retour à l'accueil -->
+    <div class="tile animate-fade-up">
+      <i class="fas fa-home"></i>
+      <h2>Retour à l’accueil</h2>
+      <p>Revenir à la page principale du portail Lucie.</p>
+      <a href="../index.html">Accueil</a>
     </div>
 
   </div>
 
-  <footer data-include></footer>
+  <!-- Pied de page -->
+  <footer class="metro-footer">
+    <p>&copy; 2025 Lucie – Préparation à la Retraite. Tous droits réservés.</p>
+    <nav>
+      <a href="../index.html">Accueil</a> |
+      <a href="#">Mentions légales</a> |
+      <a href="#">Support</a>
+    </nav>
+  </footer>
 
   <script src="../assets/js/transition.js"></script>
   <script src="../assets/js/script.js"></script>

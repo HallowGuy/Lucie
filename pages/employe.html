@@ -10,37 +10,80 @@
 </head>
 <body class="fade-in">
 
-  <header data-include></header>
+  <!-- En-tête -->
+  <header class="metro-header">
+    <div class="container">
+      <img src="../assets/img/logo.png" alt="Logo Lucie" class="logo" />
+      <div class="header-text">
+        <h1>Espace Collaborateur</h1>
+        <p>Gérez votre retraite en toute simplicité</p>
+      </div>
+    </div>
+  </header>
 
+  <!-- Section de bienvenue -->
+  <section class="welcome-section">
+    <h1>Bienvenue dans votre espace personnel</h1>
+    <p>Accédez aux fonctionnalités clés pour bien préparer votre retraite</p>
+  </section>
+
+  <!-- Grille de tuiles -->
   <div class="tile-grid">
-    <div class="tile tile-large" style="--tile-color: var(--main-color)">
+
+    <div class="tile animate-fade-up">
       <i class="fas fa-chart-line"></i>
       <h2>Tableau de Bord</h2>
-      <a href="#">Ouvrir</a>
+      <p>Suivez vos démarches, échéances, et visualisez votre progression.</p>
+      <a href="#">Accéder</a>
     </div>
-    <div class="tile" style="--tile-color: var(--accent-color)">
+
+    <div class="tile animate-fade-up delay">
       <i class="fas fa-book-reader"></i>
-      <h2>Formations</h2>
-      <a href="#">Ouvrir</a>
+      <h2>Modules de Formation</h2>
+      <p>Anticipez votre retraite avec vidéos, quiz et guides pratiques.</p>
+      <a href="#">Accéder</a>
     </div>
-    <div class="tile" style="--tile-color: var(--main-color)">
+
+    <div class="tile animate-fade-up">
       <i class="fas fa-user-friends"></i>
       <h2>Mon Mentor</h2>
-      <a href="#">Ouvrir</a>
+      <p>Échangez avec une personne retraitée et bénéficiez de conseils.</p>
+      <a href="#">Accéder</a>
     </div>
-    <div class="tile" style="--tile-color: var(--accent-color)">
+
+    <div class="tile animate-fade-up delay">
       <i class="fas fa-hands-helping"></i>
       <h2>Bénévolat</h2>
-      <a href="#">Ouvrir</a>
+      <p>Découvrez des missions utiles à votre profil et vos envies.</p>
+      <a href="#">Accéder</a>
     </div>
-    <div class="tile tile-wide" style="--tile-color: var(--main-color)">
+
+    <div class="tile animate-fade-up">
       <i class="fas fa-folder-open"></i>
       <h2>Mes Documents</h2>
-      <a href="#">Ouvrir</a>
+      <p>Centralisez vos justificatifs administratifs pour un suivi fluide.</p>
+      <a href="#">Accéder</a>
     </div>
+
+    <!-- Tuile de retour à l’accueil -->
+    <div class="tile animate-fade-up">
+      <i class="fas fa-home"></i>
+      <h2>Retour à l’accueil</h2>
+      <p>Revenir à la page principale du portail Lucie.</p>
+      <a href="../index.html">Accueil</a>
+    </div>
+
   </div>
 
-  <footer data-include></footer>
+  <!-- Pied de page -->
+  <footer class="metro-footer">
+    <p>&copy; 2025 Lucie – Préparation à la Retraite. Tous droits réservés.</p>
+    <nav>
+      <a href="../index.html">Accueil</a> |
+      <a href="#">Mentions légales</a> |
+      <a href="#">Support</a>
+    </nav>
+  </footer>
 
   <script src="../assets/js/transition.js"></script>
   <script src="../assets/js/script.js"></script>
