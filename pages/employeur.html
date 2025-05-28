@@ -10,66 +10,48 @@
 </head>
 <body class="fade-in">
 
-  <!-- Barre latérale RH -->
-  <aside>
-    <h2>Lucie RH</h2>
-    <a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Accueil</a>
-    <a class="nav-link" href="#"><i class="fas fa-users"></i> Vue RH Globale</a>
-    <a class="nav-link" href="#"><i class="fas fa-star"></i> Évaluations Annuelles</a>
-    <a class="nav-link" href="#"><i class="fas fa-heartbeat"></i> Visites Médicales</a>
-    <a class="nav-link" href="#"><i class="fas fa-route"></i> Parcours Collaborateurs</a>
-    <a class="nav-link" href="#"><i class="fas fa-tools"></i> Administration</a>
-  </aside>
-<div class="page-wrapper">
+  <header data-include></header>
 
-  <!-- Contenu principal -->
-  <div class="main-content">
-    <header data-include></header>
+  <div class="tile-grid">
 
-    <div class="notification-bar">
-      <i class="fas fa-bell"></i>
-      <span>Vous avez 3 dossiers collaborateurs en attente de validation RH.</span>
+    <div class="tile tile-large" style="--tile-color: var(--main-color)">
+      <i class="fas fa-users"></i>
+      <h2>Vue RH Globale</h2>
+      <p>Suivi transversal de tous les employés et indicateurs clés RH.</p>
+      <a href="#">Accéder</a>
     </div>
 
-    <div class="grid-container">
-      <div class="card animate-fade-up">
-        <i class="fas fa-users"></i>
-        <h2>Vue d'ensemble RH</h2>
-        <p>Visualisez en un coup d'œil l'ensemble des situations collaborateurs.</p>
-        <a href="#">Accéder</a>
-      </div>
-
-      <div class="card animate-fade-up delay">
-        <i class="fas fa-star"></i>
-        <h2>Évaluation Annuelle</h2>
-        <p>Lancez ou consultez les campagnes d’évaluation en cours ou passées.</p>
-        <a href="#">Accéder</a>
-      </div>
-
-      <div class="card animate-fade-up">
-        <i class="fas fa-heartbeat"></i>
-        <h2>Visites Médicales</h2>
-        <p>Suivez les échéances réglementaires et les convocations médicales.</p>
-        <a href="#">Accéder</a>
-      </div>
-
-      <div class="card animate-fade-up delay">
-        <i class="fas fa-route"></i>
-        <h2>Parcours Collaborateurs</h2>
-        <p>Planifiez les trajectoires RH et les étapes clés de chaque employé.</p>
-        <a href="#">Accéder</a>
-      </div>
-
-      <div class="card animate-fade-up">
-        <i class="fas fa-tools"></i>
-        <h2>Administration</h2>
-        <p>Attribuez des droits, gérez les comptes utilisateurs et les rôles RH.</p>
-        <a href="#">Accéder</a>
-      </div>
+    <div class="tile" style="--tile-color: var(--accent-color)">
+      <i class="fas fa-star"></i>
+      <h2>Évaluations Annuelles</h2>
+      <p>Lancez ou consultez les campagnes d’évaluation.</p>
+      <a href="#">Accéder</a>
     </div>
+
+    <div class="tile" style="--tile-color: var(--main-color)">
+      <i class="fas fa-heartbeat"></i>
+      <h2>Visites Médicales</h2>
+      <p>Planifiez et suivez les obligations médicales.</p>
+      <a href="#">Accéder</a>
+    </div>
+
+    <div class="tile" style="--tile-color: var(--accent-color)">
+      <i class="fas fa-route"></i>
+      <h2>Parcours Collaborateurs</h2>
+      <p>Visualisez les étapes de carrière et actions RH.</p>
+      <a href="#">Accéder</a>
+    </div>
+
+    <div class="tile tile-wide" style="--tile-color: var(--main-color)">
+      <i class="fas fa-tools"></i>
+      <h2>Administration</h2>
+      <p>Gérez les droits, les utilisateurs et les rôles RH.</p>
+      <a href="#">Accéder</a>
+    </div>
+
   </div>
-    <footer data-include></footer>
-  </div>
+
+  <footer data-include></footer>
 
   <script src="../assets/js/transition.js"></script>
   <script src="../assets/js/script.js"></script>

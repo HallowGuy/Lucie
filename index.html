@@ -5,27 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lucie – Portail Retraite</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" href="assets/img/logo.png" type="image/png" />
 </head>
 <body class="fade-in">
 
   <header data-include></header>
 
-  <main class="main-selection">
-    <div class="container">
-      <section class="choice animate-fade-up">
-        <h2>Espace Collaborateur</h2>
-        <p>Suivez votre parcours de retraite, vos documents et vos actions à mener.</p>
-        <a class="button" href="pages/employe.html">Accéder</a>
-      </section>
+  <section class="welcome-section">
+    <h1>Bienvenue sur Lucie</h1>
+    <p>Un portail unique pour anticiper, gérer et accompagner la retraite en toute sérénité.</p>
+  </section>
 
-      <section class="choice animate-fade-up delay">
-        <h2>Espace Employeur</h2>
-        <p>Gérez les dossiers de vos employés, planifiez les départs, suivez les obligations RH.</p>
-        <a class="button" href="pages/employeur.html">Accéder</a>
-      </section>
+  <div class="tile-grid">
+
+    <div class="tile tile-large" style="--tile-color: var(--main-color)">
+      <i class="fas fa-user"></i>
+      <h2>Espace Collaborateur</h2>
+      <p>Accédez à votre dossier retraite, documents et suivi personnalisé.</p>
+      <a href="pages/employe.html">Accéder</a>
     </div>
-  </main>
+
+    <div class="tile tile-large" style="--tile-color: var(--accent-color)">
+      <i class="fas fa-building"></i>
+      <h2>Espace Employeur</h2>
+      <p>Pilotez les départs, centralisez les dossiers et anticipez les échéances RH.</p>
+      <a href="pages/employeur.html">Accéder</a>
+    </div>
+
+  </div>
 
   <footer data-include></footer>
 
