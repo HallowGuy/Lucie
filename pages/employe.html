@@ -10,67 +10,70 @@
 </head>
 <body class="fade-in">
 
-  <!-- Sidebar -->
-  <aside>
-    <h2>Lucie</h2>
-    <a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Accueil</a>
-    <a class="nav-link" href="#"><i class="fas fa-chart-line"></i> Tableau de Bord</a>
-    <a class="nav-link" href="#"><i class="fas fa-book-open"></i> Formations</a>
-    <a class="nav-link" href="#"><i class="fas fa-user-friends"></i> Mentor</a>
-    <a class="nav-link" href="#"><i class="fas fa-hands-helping"></i> Bénévolat</a>
-    <a class="nav-link" href="#"><i class="fas fa-folder-open"></i> Documents</a>
-  </aside>
-<div class="page-wrapper">
+  <!-- Conteneur principal en flex -->
+  <div class="page-wrapper">
+    
+    <!-- Sidebar -->
+    <aside>
+      <h2>Lucie</h2>
+      <a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Accueil</a>
+      <a class="nav-link" href="#"><i class="fas fa-chart-line"></i> Tableau de Bord</a>
+      <a class="nav-link" href="#"><i class="fas fa-book-open"></i> Formations</a>
+      <a class="nav-link" href="#"><i class="fas fa-user-friends"></i> Mentor</a>
+      <a class="nav-link" href="#"><i class="fas fa-hands-helping"></i> Bénévolat</a>
+      <a class="nav-link" href="#"><i class="fas fa-folder-open"></i> Documents</a>
+    </aside>
 
-  <!-- Contenu principal -->
-  <div class="main-content">
-    <header data-include></header>
+    <!-- Contenu principal -->
+    <div class="main-content">
+      <header data-include></header>
 
-    <div class="notification-bar">
-      <i class="fas fa-bell"></i>
-      <span>Rappel : votre entretien retraite est prévu le 15 juin à 10h30. Pensez à le préparer.</span>
+      <div class="notification-bar">
+        <i class="fas fa-bell"></i>
+        <span>Rappel : votre entretien retraite est prévu le 15 juin à 10h30. Pensez à le préparer.</span>
+      </div>
+
+      <div class="grid-container">
+        <div class="card animate-fade-up">
+          <i class="fas fa-chart-pie"></i>
+          <h2>Tableau de Bord</h2>
+          <p>Suivez vos démarches, échéances, et visualisez votre progression personnalisée.</p>
+          <a href="#">Accéder</a>
+        </div>
+
+        <div class="card animate-fade-up delay">
+          <i class="fas fa-book-reader"></i>
+          <h2>Modules de Formation</h2>
+          <p>Apprenez à anticiper votre retraite avec des vidéos, quiz et guides spécialisés.</p>
+          <a href="#">Accéder</a>
+        </div>
+
+        <div class="card animate-fade-up">
+          <i class="fas fa-user-friends"></i>
+          <h2>Mon Mentor</h2>
+          <p>Discutez avec une personne retraitée pour bénéficier de conseils concrets.</p>
+          <a href="#">Accéder</a>
+        </div>
+
+        <div class="card animate-fade-up delay">
+          <i class="fas fa-hands-helping"></i>
+          <h2>Bénévolat</h2>
+          <p>Explorez des missions de bénévolat valorisant votre expérience professionnelle.</p>
+          <a href="#">Accéder</a>
+        </div>
+
+        <div class="card animate-fade-up">
+          <i class="fas fa-file-alt"></i>
+          <h2>Mes Documents</h2>
+          <p>Centralisez tous vos documents administratifs et justificatifs importants.</p>
+          <a href="#">Accéder</a>
+        </div>
+      </div>
+
+      <footer data-include></footer>
     </div>
-
-    <div class="grid-container">
-      <div class="card animate-fade-up">
-        <i class="fas fa-chart-pie"></i>
-        <h2>Tableau de Bord</h2>
-        <p>Suivez vos démarches, échéances, et visualisez votre progression personnalisée.</p>
-        <a href="#">Accéder</a>
-      </div>
-
-      <div class="card animate-fade-up delay">
-        <i class="fas fa-book-reader"></i>
-        <h2>Modules de Formation</h2>
-        <p>Apprenez à anticiper votre retraite avec des vidéos, quiz et guides spécialisés.</p>
-        <a href="#">Accéder</a>
-      </div>
-
-      <div class="card animate-fade-up">
-        <i class="fas fa-user-friends"></i>
-        <h2>Mon Mentor</h2>
-        <p>Discutez avec une personne retraitée pour bénéficier de conseils concrets.</p>
-        <a href="#">Accéder</a>
-      </div>
-
-      <div class="card animate-fade-up delay">
-        <i class="fas fa-hands-helping"></i>
-        <h2>Bénévolat</h2>
-        <p>Explorez des missions de bénévolat valorisant votre expérience professionnelle.</p>
-        <a href="#">Accéder</a>
-      </div>
-
-      <div class="card animate-fade-up">
-        <i class="fas fa-file-alt"></i>
-        <h2>Mes Documents</h2>
-        <p>Centralisez tous vos documents administratifs et justificatifs importants.</p>
-        <a href="#">Accéder</a>
-      </div>
-    </div>
-
-    <footer data-include></footer>
   </div>
-</div>
+
   <!-- Scripts -->
   <script src="../assets/js/transition.js"></script>
   <script src="../assets/js/script.js"></script>
