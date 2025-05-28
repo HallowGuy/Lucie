@@ -24,9 +24,12 @@ body {
 
 body.fade-in {
   opacity: 1;
+  transition: opacity 0.5s ease-in;
 }
+
 body.fade-out {
   opacity: 0;
+  transition: opacity 0.3s ease-out;
 }
 
 /* HEADER */

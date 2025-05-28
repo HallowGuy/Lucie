@@ -1,24 +1,18 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Appliquer la classe fade-in à l'arrivée
+// Applique la transition d'apparition une fois que le DOM est prêt
+document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("fade-in");
+});
 
-  // Pour tous les liens internes
-  const anchors = document.querySelectorAll("a[href]");
+// Avant de quitter la page (clic sur un lien ou fermeture), applique la transition de sortie
+window.addEventListener("beforeunload", () => {
+  document.body.classList.remove("fade-in");
+  document.body.classList.add("fade-out");
+});
 
-  anchors.forEach(anchor => {
-    const href = anchor.getAttribute("href");
-    const isInternal = href && !href.startsWith("http") && !href.startsWith("#");
-
-    if (isInternal) {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.body.classList.remove("fade-in");
-        document.body.classList.add("fade-out");
-
-        setTimeout(() => {
-          window.location.href = href;
-        }, 300); // doit être < transition CSS (0.5s)
-      });
-    }
-  });
+// Corrige le bug du retour arrière : réaffiche la page avec l'animation
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted || window.performance.getEntriesByType("navigation")[0].type === "back_forward") {
+    document.body.classList.remove("fade-out");
+    document.body.classList.add("fade-in");
+  }
 });
