@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue RH Globale – Lucie</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="../assets/img/logo.png" type="image/png">
+  <style>
+    .dashboard-section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .stat-card {
+      background-color: #fdc93b;
+      color: #1a2a40;
+      border-radius: 10px;
+      padding: 25px;
+      flex: 1 1 280px;
+      margin: 15px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .stat-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .stat-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .stat-card p {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .chart-placeholder {
+      height: 300px;
+      background: repeating-linear-gradient(45deg, #e0e0e0, #e0e0e0 10px, #f4f6f8 10px, #f4f6f8 20px);
+      border: 1px dashed #bbb;
+      border-radius: 8px;
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body class="fade-in">
+
+  <header class="metro-header">
+    <div class="container">
+      <img src="../assets/img/logo.png" alt="Logo Lucie" class="logo">
+      <div class="header-text">
+        <h1>Vue RH Globale</h1>
+        <p>Statistiques et indicateurs clés</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="dashboard-section">
+    <div class="stat-grid">
+      <div class="stat-card">
+        <h3>Collaborateurs actifs</h3>
+        <p>152</p>
+      </div>
+      <div class="stat-card">
+        <h3>Évaluations complétées</h3>
+        <p>134</p>
+      </div>
+      <div class="stat-card">
+        <h3>Visites médicales à venir</h3>
+        <p>18</p>
+      </div>
+      <div class="stat-card">
+        <h3>Dossiers en anomalie</h3>
+        <p>3</p>
+      </div>
+    </div>
+
+    <div class="chart-placeholder">
+      Graphique d’évolution du nombre d’évaluations sur 12 mois (placeholder)
+    </div>
+  </section>
+
+  <footer class="metro-footer">
+    <p>&copy; 2025 Lucie – Préparation à la Retraite. Tous droits réservés.</p>
+    <nav>
+      <a href="../index.html">Accueil</a> |
+      <a href="#">Mentions légales</a> |
+      <a href="#">Support</a>
+    </nav>
+  </footer>
+
+  <script src="../assets/js/transition.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

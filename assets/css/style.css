@@ -185,3 +185,26 @@ body.fade-out {
 .tile-employeur a:hover {
   background-color: #14202e;
 }
+
+
+.tile-employeur {
+  background-color: #FDC93B; /* Jaune foncé */
+  color: #1A2A40;            /* Bleu nuit */
+  border: 2px solid #1A2A40;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tile-employeur h2,
+.tile-employeur p,
+.tile-employeur i {
+  color: #1A2A40; /* Tout le texte + icônes en bleu nuit */
+}
+
+.tile-employeur a {
+  background-color: #1A2A40; /* Bouton bleu nuit */
+  color: white;
+}
+
+.tile-employeur a:hover {
+  background-color: #0f1d2f; /* Bleu nuit foncé au survol */
+}
