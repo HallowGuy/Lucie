@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Équipe Projet – Lucie</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="../assets/img/logo.png" type="image/png" />
+  <style>
+    .team-section {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .team-section h1 {
+      color: var(--main-color);
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .team-section p {
+      color: #444;
+      font-size: 1rem;
+      margin-bottom: 40px;
+    }
+
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+
+    .team-card {
+      background-color: #fff;
+      border: 2px solid var(--main-color);
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 240px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid var(--accent-color);
+    }
+
+    .team-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: var(--main-color);
+    }
+
+    .team-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      color: #fbc02d;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      .team-card {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body class="fade-in">
+
+  <header class="metro-header">
+    <div class="container">
+      <img src="../assets/img/logo.png" alt="Logo Lucie" class="logo" />
+      <div class="header-text">
+        <h1>Équipe Projet</h1>
+        <p>Découvrez les membres qui ont conçu et développé cette maquette</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="team-section">
+    <h1>Nos contributeurs</h1>
+    <p>Merci à celles et ceux qui ont contribué à cette version de démonstration</p>
+
+    <div class="team-grid">
+
+      <div class="team-card">
+        <img src="../assets/img/avatar1.png" alt="Membre 1">
+        <h3>Lucie Martin</h3>
+        <p>UI/UX Designer</p>
+        <div class="rating">
+          ★★★★★
+        </div>
+      </div>
+
+      <div class="team-card">
+        <img src="../assets/img/avatar2.png" alt="Membre 2">
+        <h3>Hadi Abdallah</h3>
+        <p>Responsable Avant-Vente</p>
+        <div class="rating">
+          ★★★★★
+        </div>
+      </div>
+
+      <div class="team-card">
+        <img src="../assets/img/avatar3.png" alt="Membre 3">
+        <h3>Mohamed Sahmarani</h3>
+        <p>Développement Front-End</p>
+        <div class="rating">
+          ★★★★☆
+        </div>
+      </div>
+
+      <div class="team-card">
+        <img src="../assets/img/avatar4.png" alt="Membre 4">
+        <h3>Mireille Kamga</h3>
+        <p>Tests et validation</p>
+        <div class="rating">
+          ★★★★☆
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="metro-footer">
+    <p>&copy; 2025 Lucie – Préparation à la Retraite. Tous droits réservés.</p>
+    <nav>
+      <a href="../index.html">Accueil</a> |
+      <a href="#">Mentions légales</a> |
+      <a href="#">Support</a> |
+      <a href="equipe.html" class="project-team-link">Équipe Projet</a>
+    </nav>
+  </footer>
+
+  <script src="../assets/js/transition.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

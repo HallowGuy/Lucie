@@ -198,3 +198,19 @@ body.fade-out {
     width: 100%;
   }
 }
+.project-team-link {
+  font-weight: bold;
+  color: #d32f2f; /* rouge foncé pour attirer l'œil */
+  background-color: #fff3e0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: 10px;
+}
+
+.project-team-link:hover {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+  text-decoration: underline;
+}
