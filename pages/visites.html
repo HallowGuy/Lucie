@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visites Médicales – Suivi Collaborateurs</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #fff;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    th {
+      background-color: var(--main-color);
+      color: white;
+    }
+    .btn-group {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .btn-action {
+      background-color: var(--accent-color);
+      color: var(--text-dark);
+      border: none;
+      padding: 10px 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .btn-action:hover {
+      background-color: #e6b022;
+    }
+  </style>
+</head>
+<body class="fade-in">
+  <header class="metro-header">
+    <div class="container">
+      <img src="../assets/img/logo.png" alt="Logo Lucie" class="logo" />
+      <div class="header-text">
+        <h1>Suivi des Visites Médicales</h1>
+        <p>Tableau récapitulatif des visites à venir ou réalisées</p>
+      </div>
+    </div>
+  </header>
+
+  <main style="max-width: 1200px; margin: 2rem auto; padding: 0 20px;">
+    <div class="btn-group">
+      <button class="btn-action">+ Ajouter un collaborateur</button>
+      <button class="btn-action">Exporter les données</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Date de naissance</th>
+          <th>Date de retraite</th>
+          <th>Visite médicale</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Durand</td><td>Claire</td><td>12/04/1964</td><td>01/06/2026</td><td>15/03/2025</td></tr>
+        <tr><td>Moreau</td><td>Jean</td><td>03/11/1962</td><td>01/01/2026</td><td>07/02/2025</td></tr>
+        <tr><td>Legrand</td><td>Isabelle</td><td>27/07/1963</td><td>01/10/2025</td><td>22/01/2025</td></tr>
+        <tr><td>Martinez</td><td>Antoine</td><td>09/06/1965</td><td>01/03/2027</td><td>03/04/2025</td></tr>
+        <tr><td>Nguyen</td><td>Thierry</td><td>19/02/1961</td><td>01/12/2025</td><td>18/09/2024</td></tr>
+        <tr><td>Roux</td><td>Sophie</td><td>05/05/1966</td><td>01/09/2026</td><td>20/05/2025</td></tr>
+        <tr><td>Petit</td><td>Laurent</td><td>23/08/1964</td><td>01/11/2025</td><td>10/06/2025</td></tr>
+        <tr><td>Fournier</td><td>Amélie</td><td>14/03/1963</td><td>01/05/2025</td><td>14/01/2025</td></tr>
+        <tr><td>Garcia</td><td>Michel</td><td>30/01/1960</td><td>01/07/2025</td><td>30/03/2025</td></tr>
+        <tr><td>Lemoine</td><td>Nathalie</td><td>08/10/1962</td><td>01/02/2026</td><td>19/12/2024</td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="metro-footer">
+    <p>&copy; 2025 Lucie – Module Visite Médicale</p>
+    <nav>
+      <a href="../index.html">Accueil</a> |
+      <a href="#">Mentions légales</a> |
+      <a href="#">Support</a>
+    </nav>
+  </footer>
+</body>
+</html>

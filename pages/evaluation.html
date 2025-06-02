@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Évaluation Annuelle – Préparer ma Retraite</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .tile.centered-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .tile.centered-form label,
+    .tile.centered-form input,
+    .tile.centered-form select,
+    .tile.centered-form button {
+      max-width: 500px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="fade-in">
+  <header class="metro-header">
+    <div class="container">
+      <img src="../assets/img/logo.png" alt="Logo Lucie" class="logo" />
+      <div class="header-text">
+        <h1>Évaluation Annuelle</h1>
+        <p>Connecté à votre SIRH pour récupérer les évaluations</p>
+      </div>
+    </div>
+  </header>
+
+  <main style="max-width: 800px; margin: 2rem auto; padding: 0 20px;">
+    <section class="welcome-section">
+      <h1>Synchronisation avec votre système RH</h1>
+      <p>Connectez-vous à votre SIRH pour importer automatiquement les profils à évaluer.</p>
+    </section>
+
+    <div class="tile centered-form" style="background-color: var(--background-color); color: var(--text-dark);">
+      <label for="rh-system" style="font-weight:bold; display:block; margin-bottom:10px;">Choisir votre SIRH :</label>
+      <select id="rh-system" onchange="showConnectionForm()" style="padding:10px; border-radius:6px; border:1px solid #ccc; font-size:1rem; margin-bottom:20px;">
+        <option value="">-- Sélectionner --</option>
+        <option value="silae">SILAE</option>
+        <option value="eurecia">EURECIA</option>
+        <option value="lucca">LUCCA</option>
+      </select>
+
+      <div id="connection-form" style="display:none;">
+        <label for="api-url" style="font-weight:bold; margin-top:15px; display:block;">URL de l’API :</label>
+        <input type="text" id="api-url" placeholder="https://api.exemple.com" style="padding:10px; margin-bottom:10px; border-radius:6px; border:1px solid #ccc;">
+
+        <label for="username" style="font-weight:bold; display:block;">Nom d'utilisateur :</label>
+        <input type="text" id="username" placeholder="Votre identifiant" style="padding:10px; margin-bottom:10px; border-radius:6px; border:1px solid #ccc;">
+
+        <label for="password" style="font-weight:bold; display:block;">Mot de passe :</label>
+        <input type="password" id="password" placeholder="Votre mot de passe" style="padding:10px; margin-bottom:20px; border-radius:6px; border:1px solid #ccc;">
+
+        <button onclick="connectToSystem()" style="background-color: var(--accent-color); color: var(--text-dark); border:none; padding:10px 20px; border-radius:6px; font-weight:bold; cursor:pointer;">
+          Connecter & Charger les données
+        </button>
+      </div>
+
+      <div id="result" style="margin-top: 20px;"></div>
+    </div>
+  </main>
+
+  <footer class="metro-footer">
+    <p>&copy; 2025 Lucie – Module d'Évaluation Annuelle</p>
+    <nav>
+      <a href="../index.html">Accueil</a> |
+      <a href="#">Mentions légales</a> |
+      <a href="#">Support</a>
+    </nav>
+  </footer>
+
+  <script>
+    function showConnectionForm() {
+      const selectedSystem = document.getElementById('rh-system').value;
+      const form = document.getElementById('connection-form');
+      const result = document.getElementById('result');
+      result.innerHTML = '';
+      form.style.display = selectedSystem ? 'block' : 'none';
+    }
+
+    function connectToSystem() {
+      const system = document.getElementById('rh-system').value;
+      const url = document.getElementById('api-url').value;
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const result = document.getElementById('result');
+
+      if (!url || !username || !password) {
+        result.innerHTML = '<p style="color:red;">Tous les champs de connexion sont requis.</p>';
+        return;
+      }
+
+      result.innerHTML = `<p>Connexion à <strong>${system.toUpperCase()}</strong> via ${url}...</p>`;
+
+      setTimeout(() => {
+        result.innerHTML += `<p><strong>Succès :</strong> 42 profils récupérés depuis ${system.toUpperCase()}.</p>`;
+      }, 1500);
+    }
+  </script>
+</body>
+</html>

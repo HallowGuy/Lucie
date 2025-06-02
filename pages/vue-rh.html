@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="../assets/img/logo.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     .dashboard-section {
       padding: 40px 20px;
@@ -41,17 +42,42 @@
       font-weight: bold;
     }
 
-    .chart-placeholder {
-      height: 300px;
-      background: repeating-linear-gradient(45deg, #e0e0e0, #e0e0e0 10px, #f4f6f8 10px, #f4f6f8 20px);
-      border: 1px dashed #bbb;
-      border-radius: 8px;
-      margin-top: 30px;
+    .charts-section {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .chart-container {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      color: #888;
-      font-size: 1rem;
+    }
+
+    .chart-title {
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    .btn-export {
+      margin: 30px 0;
+      display: block;
+      margin-left: auto;
+      background-color: #273961;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -66,30 +92,32 @@
       </div>
     </div>
   </header>
+    
 
   <section class="dashboard-section">
+    <button class="btn-export">Exporter les statistiques</button>
     <div class="stat-grid">
-      <div class="stat-card">
-        <h3>Collaborateurs actifs</h3>
-        <p>152</p>
+      <div class="stat-card"><h3>Collaborateurs actifs</h3><p>152</p></div>
+      <div class="stat-card"><h3>Évaluations complétées</h3><p>134</p></div>
+      <div class="stat-card"><h3>Visites médicales à venir</h3><p>18</p></div>
+      <div class="stat-card"><h3>Dossiers en anomalie</h3><p>3</p></div>
+      <div class="stat-card"><h3>Collaborateurs bénévoles</h3><p>46</p></div>
+      <div class="stat-card"><h3>Répartition H/F</h3><p>60% / 40%</p></div>
+      <div class="stat-card"><h3>Documents à valider</h3><p>28</p></div>
+      <div class="stat-card"><h3>Entrées ce trimestre</h3><p>17</p></div>
+    </div>
+
+    <div class="charts-section">
+      <div class="chart-container">
+        <div class="chart-title">Évolution mensuelle des évaluations</div>
+        <canvas id="evaluationsChart"></canvas>
       </div>
-      <div class="stat-card">
-        <h3>Évaluations complétées</h3>
-        <p>134</p>
-      </div>
-      <div class="stat-card">
-        <h3>Visites médicales à venir</h3>
-        <p>18</p>
-      </div>
-      <div class="stat-card">
-        <h3>Dossiers en anomalie</h3>
-        <p>3</p>
+      <div class="chart-container">
+        <div class="chart-title">Répartition par genre</div>
+        <canvas id="genderChart"></canvas>
       </div>
     </div>
 
-    <div class="chart-placeholder">
-      Graphique d’évolution du nombre d’évaluations sur 12 mois (placeholder)
-    </div>
   </section>
 
   <footer class="metro-footer">
@@ -100,6 +128,48 @@
       <a href="#">Support</a>
     </nav>
   </footer>
+
+  <script>
+    const ctx1 = document.getElementById('evaluationsChart');
+    new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc'],
+        datasets: [{
+          label: 'Nombre d’évaluations',
+          data: [12, 19, 15, 13, 17, 22, 28, 25, 20, 21, 23, 26],
+          backgroundColor: '#869ECE'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: true },
+          title: { display: true, text: 'Évaluations réalisées par mois' }
+        }
+      }
+    });
+
+    const ctx2 = document.getElementById('genderChart');
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: ['Femmes', 'Hommes'],
+        datasets: [{
+          label: 'Répartition H/F',
+          data: [60, 40],
+          backgroundColor: ['#C9A73F', '#273961']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom' },
+          title: { display: true, text: 'Répartition actuelle des genres' }
+        }
+      }
+    });
+  </script>
 
   <script src="../assets/js/transition.js"></script>
   <script src="../assets/js/script.js"></script>
