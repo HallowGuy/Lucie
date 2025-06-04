@@ -7,6 +7,73 @@
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" href="../assets/img/logo.png" type="image/png" />
+  <style>
+    .info-button {
+      background-color: var(--accent-color, #66ccff);
+      color: var(--text-dark, #000);
+      border: none;
+      padding: 10px 16px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .info-button:hover {
+      background-color: #55bbee;
+    }
+
+    .pdf-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      display: none;
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .pdf-container iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .visible {
+      display: block !important;
+    }
+
+    .header-title-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+
+    .header-action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      .header-action-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .info-button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body class="fade-in">
 
@@ -15,15 +82,21 @@
     <div class="container">
       <img src="../assets/img/logo.png" alt="Logo Lucie" class="logo" />
       <div class="header-text">
-        <h1>Mentorat</h1>
-        <p>Un accompagnement humain et bienveillant</p>
+        <div class="header-action-bar">
+          <div class="header-title-container">
+            <h1>Mentorat</h1>
+            <p>Un accompagnement humain et bienveillant</p>
+          </div>
+          <button class="info-button" onclick="togglePdfViewer()" title="Voir les informations détaillées en PDF">
+            <i class="fas fa-info-circle"></i> Informations PDF
+          </button>
+        </div>
       </div>
     </div>
   </header>
 
   <!-- Tuiles -->
   <section class="tile-grid">
-
     <div class="tile">
       <i class="fas fa-comments"></i>
       <h2>Discuter avec un mentor</h2>
@@ -52,7 +125,12 @@
       <p>Revenir à votre espace personnel.</p>
       <a href="employee.html">Retour</a>
     </div>
+  </section>
 
+  <!-- PDF Viewer caché au début -->
+  <section id="pdf-viewer" class="pdf-container">
+    <h2>Document de présentation du mentorat</h2>
+    <iframe src="../assets/pdf/mentorat.pdf" allowfullscreen></iframe>
   </section>
 
   <!-- Pied de page -->
@@ -67,5 +145,15 @@
 
   <script src="../assets/js/transition.js"></script>
   <script src="../assets/js/script.js"></script>
+  <script>
+    function togglePdfViewer() {
+      const viewer = document.getElementById('pdf-viewer');
+      viewer.classList.toggle('visible');
+      window.scrollTo({
+        top: viewer.offsetTop - 50,
+        behavior: 'smooth'
+      });
+    }
+  </script>
 </body>
 </html>

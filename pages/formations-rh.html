@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formations RH – Gestion des Plans de Formation</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 20px;
+    }
+
+    .tile.centered-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: var(--background-color, #fff);
+      color: var(--text-dark, #000);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .tile.centered-form label,
+    .tile.centered-form input,
+    .tile.centered-form select,
+    .tile.centered-form button {
+      max-width: 500px;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .pdf-section {
+      background-color: #f5f5f5;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .pdf-viewer {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .add-template-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 10px 20px;
+      background-color: #e0e0e0;
+      color: #333;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: not-allowed;
+    }
+
+    .add-template-btn:hover {
+      background-color: #d0d0d0;
+    }
+  </style>
+</head>
+<body class="fade-in">
+  <header class="metro-header">
+    <div class="container">
+      <img src="../assets/img/logo.png" alt="Logo Lucie" class="logo" />
+      <div class="header-text">
+        <h1>Gestion des Formations</h1>
+        <p>Connecté à votre SIRH pour suivre les plans de formation</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="welcome-section">
+      <h2>Synchronisation avec votre plateforme de formation</h2>
+      <p>Connectez-vous à votre SIRH pour importer automatiquement les plans de formation associés à chaque collaborateur.</p>
+    </section>
+
+    <div class="tile centered-form">
+      <label for="rh-system"><strong>Choisir votre outil de formation :</strong></label>
+      <select id="rh-system" onchange="showConnectionForm()" style="padding:10px; border-radius:6px; border:1px solid #ccc; font-size:1rem;">
+        <option value="">-- Sélectionner --</option>
+        <option value="360learning">360Learning</option>
+        <option value="talentsoft">Talentsoft</option>
+        <option value="cornerstone">Cornerstone</option>
+      </select>
+
+      <div id="connection-form" style="display:none; width:100%;">
+        <label for="api-url"><strong>URL de l’API :</strong></label>
+        <input type="text" id="api-url" placeholder="https://api.formation.com" style="padding:10px; border-radius:6px; border:1px solid #ccc;">
+
+        <label for="username"><strong>Nom d'utilisateur :</strong></label>
+        <input type="text" id="username" placeholder="Votre identifiant RH" style="padding:10px; border-radius:6px; border:1px solid #ccc;">
+
+        <label for="password"><strong>Mot de passe :</strong></label>
+        <input type="password" id="password" placeholder="Votre mot de passe" style="padding:10px; border-radius:6px; border:1px solid #ccc;">
+
+        <button onclick="connectToSystem()" style="background-color: var(--accent-color, #66ccff); color: #000; border:none; padding:10px 20px; border-radius:6px; font-weight:bold; cursor:pointer;">
+          Connecter & Charger les plans
+        </button>
+      </div>
+
+      <div id="result" style="margin-top: 20px;"></div>
+    </div>
+
+    <div class="pdf-section">
+      <h2>Référentiel des Parcours de Formation</h2>
+      <p>Consultez notre guide interne des parcours RH :</p>
+      <iframe class="pdf-viewer" src="../assets/pdf/GuideUtilisation.pdf"></iframe>
+      <p style="margin-top:10px;">
+        <a href="../assets/pdf/GuideUtilisation.pdf" download>Télécharger le PDF</a>
+      </p>
+      <button class="add-template-btn">+ Ajouter un nouveau template</button>
+    </div>
+  </main>
+
+  <footer class="metro-footer" style="margin-top: 2rem;">
+    <p>&copy; 2025 Lucie – Module Formation RH</p>
+    <nav>
+      <a href="../index.html">Accueil</a> |
+      <a href="#">Mentions légales</a> |
+      <a href="#">Support</a>
+    </nav>
+  </footer>
+
+  <script>
+    function showConnectionForm() {
+      const selectedSystem = document.getElementById('rh-system').value;
+      const form = document.getElementById('connection-form');
+      const result = document.getElementById('result');
+      result.innerHTML = '';
+      form.style.display = selectedSystem ? 'block' : 'none';
+    }
+
+    function connectToSystem() {
+      const system = document.getElementById('rh-system').value;
+      const url = document.getElementById('api-url').value;
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const result = document.getElementById('result');
+
+      if (!url || !username || !password) {
+        result.innerHTML = '<p style="color:red;">Tous les champs de connexion sont requis.</p>';
+        return;
+      }
+
+      result.innerHTML = `<p>Connexion à <strong>${system.toUpperCase()}</strong> via ${url}...</p>`;
+
+      setTimeout(() => {
+        result.innerHTML += `<p><strong>Succès :</strong> 18 plans de formation chargés depuis ${system.toUpperCase()}.</p>`;
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
